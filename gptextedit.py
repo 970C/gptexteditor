@@ -15,7 +15,7 @@ class TextEditor:
         self.text_widget = tk.Text(self.master, undo=True, foreground="#fbfeff", background="#2e2d2a", insertbackground="#aabb33", insertwidth="5px")
         self.text_widget.pack(fill="both", expand=True)
 
-        # Add syntax highlighting to the text widget #474640
+        # Add syntax highlighting to the text widget
         self.text_widget.tag_configure("keyword", foreground="#3abbc9")
         self.text_widget.tag_configure("builtin", foreground="#43d5e6")
         self.text_widget.tag_configure("comment", foreground="#96b546")
@@ -63,8 +63,7 @@ class TextEditor:
         self.file_path = ""
         self.file_name = "Untitled.txt"
 
-        # Update the line numbers and syntax highlighting when the text widget is modified
-        #self.text_widget.bind('<Any-KeyPress>', self.update_linenumbers)
+        # Update syntax highlighting when the text widget is modified
         self.text_widget.bind('<KeyRelease>', self.highlight_syntax)
 
     def new_file(self):
@@ -173,17 +172,15 @@ class TextEditor:
         start = 1.0
         joinstr = r'\s*\()|((\.|\s)'
         patt = r"((\.|\s)"+joinstr.join(builtins)+r"\s*\()"
-        #print(patt)
         while True:
             start = self.text_widget.search(patt, start, tk.END, regexp=True, count=count)
-            #print(start)
             if not start:
                 break
             end = f"{start}+{count.get()-1}c"
             self.text_widget.tag_add("builtin", start, end)
             start = f"{start}+{count.get()}c"
 
-        #highlight strings ""
+        #highlight strings
         start = 1.0
         while True:
             start = self.text_widget.search(r"'((?:[^'\\]|\\.)*)'|\"((?:[^\"\\]|\\.)*)\"", start, tk.END, regexp=True, count=count)
