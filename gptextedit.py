@@ -8,7 +8,7 @@ openai.api_key = open('conf.txt').readline(1)
 class TextEditor:
     def __init__(self, master):
         self.master = master
-        self.master.title("Text Editor")
+        self.master.title("GPTextEditor")
         self.master.geometry("800x600")
 
         # Create a text widget
