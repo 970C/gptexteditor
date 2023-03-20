@@ -2,7 +2,6 @@ import tkinter as tk
 from tkinter import filedialog, messagebox, font
 import os
 import openai
-#import "..python/auths/opaikey.py"
 
 openai.api_key = open('conf.txt').readline(1)
 
