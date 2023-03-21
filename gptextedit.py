@@ -102,6 +102,7 @@ class TextEditor:
             self.file_path = file_path
             self.file_name = os.path.basename(self.file_path)
             self.master.title(self.file_name)
+            self.highlight_syntax()
 
     def cut(self, event=None):
         # Cut selected text
@@ -134,6 +135,15 @@ class TextEditor:
         self.text_widget.insert("end", response.choices[0].message.content)
 
     def highlight_syntax(self, event=None):
+        if not(self.file_name.endswith('.py')):
+            # Highlight the syntax of the text in the text widget
+            self.text_widget.tag_remove('keyword', '1.0', 'end')
+            self.text_widget.tag_remove('builtin', '1.0', 'end')
+            self.text_widget.tag_remove('comment', '1.0', 'end')
+            self.text_widget.tag_remove('string', '1.0', 'end')
+            self.text_widget.tag_remove('method', '1.0', 'end')
+            self.text_widget.tag_remove('number', '1.0', 'end')
+            return
         # Highlight the syntax of the text in the text widget
         self.text_widget.tag_remove('keyword', '1.0', 'end')
         self.text_widget.tag_remove('builtin', '1.0', 'end')
