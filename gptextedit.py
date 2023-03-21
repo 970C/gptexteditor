@@ -131,7 +131,7 @@ class TextEditor:
             temperature=0.8,
             stop='stop'
         )
-        messagebox.showinfo("Chat Completion", response.choices[0].message.content)
+        self.text_widget.insert("end", response.choices[0].message.content)
 
     def highlight_syntax(self, event=None):
         # Highlight the syntax of the text in the text widget
