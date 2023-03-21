@@ -3,7 +3,7 @@ from tkinter import filedialog, messagebox, font
 import os
 import openai
 
-openai.api_key = open('conf.txt').readline(1)
+openai.api_key = open('conf.txt').readline()
 
 class TextEditor:
     def __init__(self, master):
