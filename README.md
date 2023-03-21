@@ -38,3 +38,7 @@ The **top bar** menus have the following functions:
   - Select All: select everything in the document
 - **AI** menu
   - Chat Completion: Sends the text in the document to the OpenAI API ChatGPT3.5-turbo completion endpoint. The response is appended to the end of the text editor document
+
+*Screenshot of the Interface*
+
+![Screenshot of the GPTextEditor interface.](https://github.com/970C/gptexteditor/blob/master/Screenshot%20from%202023-03-20%2007-27-12.png)
