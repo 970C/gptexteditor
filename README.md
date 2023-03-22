@@ -19,7 +19,7 @@ Installation should be pretty easy, but let me know if you run into issues! GPTe
 | os | Python 3.10 |
 | openai | latest |
 
-**Note:** _tkinter_ comes packaged with the 'full' version of Python, which is not in the OS default Python installs (Mac & Lin). You'll have to install it.
+**Note:** _tkinter_ comes packaged with the 'full' version of Python, which is not in the OS default Python installs (Mac & Lin). You'll have to find instructions to install tkinter OR -> just install the full Python 3.10 package, which is far easier.
 
 ## Usage
 
