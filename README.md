@@ -1,6 +1,6 @@
-# GPTextEdit - A ChatGPT-enabled Text Editor
+# GPTextEditor - A ChatGPT-enabled Text Editor
 
-I wanted a text editor with ChatGPT built in because why tf not! GPTextEdit is a OpenAI API enabled text editor with Python syntax highlighting. The text editor is in its early alpha and is being actively developed on. Current functionality is pretty barebones at the moment with just the basic keyboard shortcuts, which are copy, cut, paste, and select all. 
+I wanted a text editor with ChatGPT built in because why tf not! GPTextEditor is a OpenAI API enabled text editor with Python syntax highlighting. The text editor is in its early alpha and is being actively developed on. Current functionality is pretty barebones at the moment with just the basic keyboard shortcuts, which are copy, cut, paste, and select all. 
 
 The OpenAI feature is set to use ChatGPT3.5-turbo. You'll need to add your api key to the sample_conf.txt; replace the placeholder and be sure to remove the white space before and after the key, and rename the file to conf.txt. The system promp is pretty good overall and  the explanations the AI produces are pretty excellent.
 
