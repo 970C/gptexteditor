@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gptexteditor"
+authors = [
+    {name = "Jonathan Hammond", email = "jhammond113@hotmail.com"},
+]
+description = "GPTextEditor is a OpenAI API enabled text editor with Python syntax highlighting."
+readme = "README.md"
+requires-python = ">=3.10"
+keywords = ["ChatGPT", "editor", "text", "python"]
+license = {text = "CC0 1.0 Universal"}
+version = "0.1a"
+dependencies = [
+    "openai",
+    "tkinter",
+    "os",
+    'importlib-metadata; python_version<"3.8"',
+]
+
+[tool.setuptools.packages]
+find = {}

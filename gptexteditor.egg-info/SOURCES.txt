@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+gptexteditor.egg-info/PKG-INFO
+gptexteditor.egg-info/SOURCES.txt
+gptexteditor.egg-info/dependency_links.txt
+gptexteditor.egg-info/requires.txt
+gptexteditor.egg-info/top_level.txt
+src/gptexteditor.py
