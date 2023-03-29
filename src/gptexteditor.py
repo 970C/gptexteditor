@@ -24,9 +24,6 @@ class TextEditor:
         #self.text_widget.tag_configure("number", foreground="#f0cd41")
 
         # Set up keyboard shortcuts
-        self.master.bind('<Control-x>', self.cut)
-        self.master.bind('<Control-c>', self.copy)
-        self.master.bind('<Control-v>', self.paste)
         self.master.bind('<Control-a>', self.select_all)
 
         # Create a menu bar
@@ -95,7 +92,7 @@ class TextEditor:
 
     def save_as_file(self):
         # Save the current file with a new name
-        file_path = filedialog.asksaveasfilename(defaultextension=".txt", filetypes=[("Text Files", "*.txt"),("Python","*.py"), ("All Files", "*.*")])
+        file_path = filedialog.asksaveasfilename(defaultextension=".py", filetypes=[("Python","*.py"), ("Text Files", "*.txt"), ("All Files", "*.*")])
         if file_path:
             with open(file_path, 'w') as file:
                 file.write(self.text_widget.get('1.0', 'end'))
@@ -126,7 +123,7 @@ class TextEditor:
         response = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
             messages=[
-                {"role": "system", "content": "You are a grand sage with the world's knowledge in your database. You are a stunningly brilliant and detailed assistant."},
+                {"role": "system", "content": "You are a grand sage with the world's knowledge in your database. You are a stunningly brilliant programmer and detailed assistant."},
                 {"role": "user", "content": text}
             ],
             temperature=0.8,
