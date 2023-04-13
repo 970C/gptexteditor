@@ -11,6 +11,10 @@ class TextEditor:
         self.master.title("GPTextEditor")
         self.master.geometry("800x600")
 
+        # Text field for system prompt
+        self.sys_prompt = tk.Entry(self.master, foreground="#fbfeff", background="#2e2d2a", insertbackground="#aabb33", insertwidth="5px")
+        self.sys_prompt.pack(fill="both", expand=True)
+
         # Create a text widget
         self.text_widget = tk.Text(self.master, undo=True, foreground="#fbfeff", background="#2e2d2a", insertbackground="#aabb33", insertwidth="5px")
         self.text_widget.pack(fill="both", expand=True)
